@@ -1,0 +1,8 @@
+services:
+  miq:
+    build: .
+    network_mode: "host"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=production
