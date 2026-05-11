@@ -253,13 +253,13 @@ def create_quote_image(
 
     text = strip_markdown_headers(text)
 
-    font, lines, line_height = get_best_fit_font(text, draw, max_text_width, max_text_height, "data/DiscordFont.ttf", True)
+    font, lines, line_height = get_best_fit_font(text, draw, max_text_width, max_text_height, "data/NotoSansJapanese.ttf", True)
     
     try:
-        name_font = ImageFont.truetype("data/DiscordFont.ttf", max(14, font.size - 8))
-        logo_font = ImageFont.truetype("data/DiscordFont.ttf", 20)
+        name_font = ImageFont.truetype("data/NotoSansJapanese.ttf", max(14, font.size - 8))
+        logo_font = ImageFont.truetype("data/NotoSansJapanese.ttf", 20)
     except:
-        name_font = ImageFont.truetype("data/DiscordFont.ttf", max(14, font.size - 8))
+        name_font = ImageFont.truetype("data/NotoSansJapanese.ttf", max(14, font.size - 8))
         logo_font = ImageFont.load_default()
 
     text_block_height = len(lines) * line_height
