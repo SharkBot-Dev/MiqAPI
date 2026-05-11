@@ -29,7 +29,7 @@ def hex_to_rgb(hex_code: str):
 def miqServer():
     args = request.args
     author = args.get('author', "Discord")
-    text = args.get('text', "テストメッセージです")[:2000]
+    text = args.get('text', "テストメッセージです")[:500]
     avatar_url = args.get('avatar_url', "https://cdn.discordapp.com/embed/avatars/0.png")
     if USE_TOR:
         domain = urlparse(avatar_url).netloc
