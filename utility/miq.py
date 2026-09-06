@@ -296,6 +296,6 @@ def create_quote_image(
     res = img if color else img.convert("L")
 
     if is_minecraft:
-        res = res.resize((200, 150))
+        res = res.resize((300, 150))
 
     return res
