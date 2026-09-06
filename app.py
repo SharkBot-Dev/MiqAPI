@@ -44,7 +44,8 @@ def miqServer():
     color = args.get('color', "True") == "True"
     negapoji = args.get('negapoji', "False") == "True"
     fake = args.get('fake', "False") == "True"
-    image = create_quote_image(author, text, avatar, backgrond, textcolor, color, negapoji, fake, True)
+    is_minecraft = args.get('mc') == "True"
+    image = create_quote_image(author, text, avatar, backgrond, textcolor, color, negapoji, fake, True, is_minecraft)
     image_io = io.BytesIO()
     image.save(image_io, "png")
     image_io.seek(0)

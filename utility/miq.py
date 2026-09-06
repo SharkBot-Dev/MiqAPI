@@ -209,6 +209,7 @@ def create_quote_image(
     negapoji: bool = False,
     fake: bool = False,
     right_gradient: bool = False,
+    is_minecraft: bool = False,
 ):
     width, height = 800, 400
     background_color = background
@@ -292,4 +293,9 @@ def create_quote_image(
     if negapoji:
         return ImageOps.invert(img.convert("RGB"))
 
-    return img if color else img.convert("L")
+    res = img if color else img.convert("L")
+
+    if is_minecraft:
+        res.resize((200, 150))
+
+    return res
